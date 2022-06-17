@@ -9,7 +9,7 @@ input.onButtonPressed(Button.B, function () {
     custom.foo()
 })
 basic.forever(function () {
-    if (cuteBot.ultrasonic(cuteBot.SonarUnit.Centimeters) > 15) {
+    if (cuteBot.kyori()) {
         cuteBot.colorLight(cuteBot.RGBLights.RGB_L, 0xff0000)
     } else {
         cuteBot.closeheadlights()

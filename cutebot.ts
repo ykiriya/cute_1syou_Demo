@@ -242,6 +242,39 @@ namespace cuteBot {
             return false;
         }
     }
+
+    //% block="15cmより近い"
+    //% weight=52
+
+    export function kyori(): boolean {
+        let dis = cuteBot.ultrasonic(cuteBot.SonarUnit.Centimeters)
+        if (dis < 15 && dis > 2) {
+            return true;
+        }
+        else {
+            return false;
+        }
+
+    }
+
+
+    //% block="30cmより近い"
+    //% weight=51
+
+    export function kyori2(): boolean {
+        let dis = cuteBot.ultrasonic(cuteBot.SonarUnit.Centimeters)
+        if (dis < 30 && dis > 2) {
+            return true;
+        }
+        else {
+            return false;
+        }
+
+    }
+
+
+
+
     /**
     * Cars can extend the ultrasonic function to prevent collisions and other functions.. 
     * @param Sonarunit two states of ultrasonic module, eg: Centimeters

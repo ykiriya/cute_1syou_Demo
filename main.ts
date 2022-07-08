@@ -9,8 +9,9 @@ function mae () {
             cuteBot.colorLight(cuteBot.RGBLights.ALL, 0xff0000)
             if (cuteBot.kyori()) {
                 basic.pause(50)
-                cuteBot.motors(30, -29)
+                cuteBot.motors(-16, -36)
             } else {
+                cuteBot.stopcar()
                 basic.pause(50)
                 cuteBot.motors(30, 0)
             }
@@ -94,10 +95,12 @@ function 前進 (数値: number, 数値2: number, 数値3: number) {
     cuteBot.stopcar()
 }
 input.onButtonPressed(Button.B, function () {
-    for (let index = 0; index < 5000; index++) {
+    basic.clearScreen()
+    for (let index = 0; index < 3000; index++) {
         mae()
     }
     basic.showIcon(IconNames.Diamond)
+    cuteBot.stopcar()
 })
 control.inBackground(function () {
     while (!(input.buttonIsPressed(Button.AB))) {
